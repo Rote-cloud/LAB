@@ -16,7 +16,13 @@
 		AE771F012B92328E007C02C4 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AE771F002B92328E007C02C4 /* SnapKit-Dynamic */; };
 		AE771F042B932189007C02C4 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE771F032B932189007C02C4 /* HeroView.swift */; };
 		AE771F062B9321EF007C02C4 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE771F052B9321EF007C02C4 /* HeroModel.swift */; };
-		AEF4D5082B9425BE00D181B3 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF4D5072B9425BE00D181B3 /* PagingCollectionViewLayout.swift */; };
+		AE7BE86A2B960E92008B7AA3 /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = AE7BE8692B960E92008B7AA3 /* CollectionViewPagingLayout */; };
+		AE7BE86C2B9621F9008B7AA3 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE86B2B9621F9008B7AA3 /* TriangleView.swift */; };
+		AE7BE86F2B976C7B008B7AA3 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE86E2B976C7B008B7AA3 /* ViewControllerExtension.swift */; };
+		AE7BE8722B976FA6008B7AA3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE8712B976FA6008B7AA3 /* Color.swift */; };
+		AE7BE8742B977039008B7AA3 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE8732B977039008B7AA3 /* ColorExtension.swift */; };
+		AE7BE8762B97727B008B7AA3 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE8752B97727B008B7AA3 /* Sizes.swift */; };
+		AE7BE8782B9775F0008B7AA3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE8772B9775F0008B7AA3 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +35,12 @@
 		AE499CA72B920DAD00A725B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE771F032B932189007C02C4 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 		AE771F052B9321EF007C02C4 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
-		AEF4D5072B9425BE00D181B3 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewLayout.swift; path = "../../../../Downloads/paging-collection-view-layout-master/PagingCollectionViewLayout.swift"; sourceTree = "<group>"; };
+		AE7BE86B2B9621F9008B7AA3 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
+		AE7BE86E2B976C7B008B7AA3 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		AE7BE8712B976FA6008B7AA3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		AE7BE8732B977039008B7AA3 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		AE7BE8752B97727B008B7AA3 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		AE7BE8772B9775F0008B7AA3 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +50,7 @@
 			files = (
 				AE771EFF2B92328E007C02C4 /* SnapKit in Frameworks */,
 				AE771F012B92328E007C02C4 /* SnapKit-Dynamic in Frameworks */,
+				AE7BE86A2B960E92008B7AA3 /* CollectionViewPagingLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +76,8 @@
 		AE499C982B920DAC00A725B3 /* LAB */ = {
 			isa = PBXGroup;
 			children = (
+				AE7BE8702B976F32008B7AA3 /* Constants */,
+				AE7BE86D2B976C47008B7AA3 /* Extensions */,
 				AE771F022B931F00007C02C4 /* Model */,
 				AE771EFA2B922A2D007C02C4 /* Controller */,
 				AE771EF92B922A14007C02C4 /* View */,
@@ -79,8 +93,8 @@
 		AE771EF92B922A14007C02C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AEF4D5072B9425BE00D181B3 /* PagingCollectionViewLayout.swift */,
 				AE771F032B932189007C02C4 /* HeroView.swift */,
+				AE7BE86B2B9621F9008B7AA3 /* TriangleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,6 +113,25 @@
 				AE771F052B9321EF007C02C4 /* HeroModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AE7BE86D2B976C47008B7AA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE7BE86E2B976C7B008B7AA3 /* ViewControllerExtension.swift */,
+				AE7BE8732B977039008B7AA3 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE7BE8702B976F32008B7AA3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AE7BE8712B976FA6008B7AA3 /* Color.swift */,
+				AE7BE8752B97727B008B7AA3 /* Sizes.swift */,
+				AE7BE8772B9775F0008B7AA3 /* Fonts.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +153,7 @@
 			packageProductDependencies = (
 				AE771EFE2B92328E007C02C4 /* SnapKit */,
 				AE771F002B92328E007C02C4 /* SnapKit-Dynamic */,
+				AE7BE8692B960E92008B7AA3 /* CollectionViewPagingLayout */,
 			);
 			productName = LAB;
 			productReference = AE499C962B920DAC00A725B3 /* LAB.app */;
@@ -151,6 +185,7 @@
 			mainGroup = AE499C8D2B920DAC00A725B3;
 			packageReferences = (
 				AE771EFD2B92328E007C02C4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				AE7BE8682B960E92008B7AA3 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */,
 			);
 			productRefGroup = AE499C972B920DAC00A725B3 /* Products */;
 			projectDirPath = "";
@@ -178,12 +213,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE7BE86C2B9621F9008B7AA3 /* TriangleView.swift in Sources */,
 				AE499C9E2B920DAC00A725B3 /* ViewController.swift in Sources */,
 				AE499C9A2B920DAC00A725B3 /* AppDelegate.swift in Sources */,
-				AEF4D5082B9425BE00D181B3 /* PagingCollectionViewLayout.swift in Sources */,
+				AE7BE86F2B976C7B008B7AA3 /* ViewControllerExtension.swift in Sources */,
 				AE771F042B932189007C02C4 /* HeroView.swift in Sources */,
 				AE499C9C2B920DAC00A725B3 /* SceneDelegate.swift in Sources */,
+				AE7BE8762B97727B008B7AA3 /* Sizes.swift in Sources */,
 				AE771F062B9321EF007C02C4 /* HeroModel.swift in Sources */,
+				AE7BE8782B9775F0008B7AA3 /* Fonts.swift in Sources */,
+				AE7BE8722B976FA6008B7AA3 /* Color.swift in Sources */,
+				AE7BE8742B977039008B7AA3 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +446,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		AE7BE8682B960E92008B7AA3 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amirdew/CollectionViewPagingLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -418,6 +466,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AE771EFD2B92328E007C02C4 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		AE7BE8692B960E92008B7AA3 /* CollectionViewPagingLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE7BE8682B960E92008B7AA3 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */;
+			productName = CollectionViewPagingLayout;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

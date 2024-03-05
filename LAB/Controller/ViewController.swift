@@ -1,7 +1,10 @@
 import UIKit
+import CollectionViewPagingLayout
 import SnapKit
 
 class ViewController: UIViewController {
+    
+    var triangle = UIView()
     
     private var marvelLogoImageView = UIImageView()
     private let marvelLogoImage = UIImage(named: "marvelLogo")
@@ -9,28 +12,27 @@ class ViewController: UIViewController {
     private let label: UILabel = {
         let label = UILabel()
         label.text = "Choose your hero"
-        label.font = UIFont.boldSystemFont(ofSize: 35)
+        label.font = Fonts.logoFont
         label.textColor = .white
         return label
     }()
     
     private var heroArray: [HeroModel] = {
-        let hero1 = HeroModel(name: "Deadpool", imageName: "deadpool")
-        let hero2 = HeroModel(name: "Deadpool", imageName: "deadpool")
-        
-        return [hero1, hero2]
+        let hero1 = HeroModel(name: "Deadpool", imageName: "Deadpool", color: Color.darkRed)
+        let hero2 = HeroModel(name: "Iron Man", imageName: "IronMan", color: Color.red)
+        let hero3 = HeroModel(name: "Spider Man", imageName: "SpiderMan", color: Color.blue)
+
+        return [hero1, hero2, hero3]
     }()
     
     private let collectionView: UICollectionView = {
-        let layout = PagingCollectionViewLayout()
+        let layout = CollectionViewPagingLayout()
         layout.scrollDirection = .horizontal
-        layout.numberOfItemsPerPage = 1
-        layout.minimumLineSpacing = 30
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.decelerationRate = .fast
-        collectionView.backgroundColor = UIColor(red: 40/255, green: 40/255, blue: 40/255, alpha: 1)
+        collectionView.backgroundColor = .clear
+        collectionView.isPagingEnabled = true
         collectionView.register(HeroView.self, forCellWithReuseIdentifier: HeroView.identifier)
         
         return collectionView
@@ -42,57 +44,51 @@ class ViewController: UIViewController {
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+
     }
     
     private func setupUI() {
-        view.backgroundColor = UIColor(red: 40/255, green: 40/255, blue: 40/255, alpha: 1)
-                
+        view.backgroundColor = Color.backColor
+        
+    
         marvelLogoImageView = UIImageView(image: marvelLogoImage)
         view.addSubview(marvelLogoImageView)
         marvelLogoImageView.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(60)
+            $0.top.equalToSuperview().inset(Sizes.paddingTop)
             $0.centerX.equalToSuperview()
-            $0.width.equalTo(140)
-            $0.height.equalTo(25)
+            $0.width.equalTo(Sizes.marvelLogoWidth)
+            $0.height.equalTo(Sizes.marvelLogoHeight)
         }
         
         view.addSubview(label)
         label.snp.makeConstraints {
-            $0.top.equalTo(marvelLogoImageView).inset(60)
+            $0.top.equalTo(marvelLogoImageView).inset(Sizes.paddingTop)
             $0.centerX.equalToSuperview()
         }
-                
+        
+        triangle = TriangleView(frame: CGRect(x: 0, y: Sizes.height / 2, width: Sizes.width, height: Sizes.height / 2))
+        view.addSubview(triangle)
+        
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
-            $0.top.equalTo(label).inset(100)
+            $0.top.equalTo(label).inset(Sizes.paddingTopCollectionView)
             $0.centerX.width.equalToSuperview()
-            $0.height.equalTo(550)
+            $0.height.equalTo(Sizes.heightCollectionView)
         }
     }
-}
-
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.heroArray.count
+    public func getHeroView() -> [HeroModel] {
+        return heroArray
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroView.identifier, for: indexPath) as? HeroView else {
-            fatalError("Fail")
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        if let visibleIndexPath = collectionView.indexPathForItem(at: visiblePoint) {
+            if let visibleCell = collectionView.cellForItem(at: visibleIndexPath) as? HeroView {
+                triangle.backgroundColor = visibleCell.getColor()
+            }
         }
-        
-        let hero = self.heroArray[indexPath.row]
-        let image = hero.imageName
-        let text = hero.name
-        cell.config(image: UIImage(named: image)!, str: text)
-        
-        return cell
     }
-}
 
-extension ViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 320, height: 550)
-    }
 }
