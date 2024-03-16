@@ -4,7 +4,10 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-    var triangle = UIView()
+    var triangleView: UIView = {
+        let triangleView = TriangleView(frame: CGRect(x: 0, y: Sizes.height / 2, width: Sizes.width, height: Sizes.height / 2))
+        return triangleView
+    }()
     
     private var marvelLogoImageView = UIImageView()
     private let marvelLogoImage = UIImage(named: "marvelLogo")
@@ -66,8 +69,7 @@ class ViewController: UIViewController {
             $0.centerX.equalToSuperview()
         }
         
-        triangle = TriangleView(frame: CGRect(x: 0, y: Sizes.height / 2, width: Sizes.width, height: Sizes.height / 2))
-        view.addSubview(triangle)
+        view.addSubview(triangleView)
         
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
@@ -77,7 +79,7 @@ class ViewController: UIViewController {
         }
     }
     
-    public func getHeroView() -> [HeroModel] {
+    public func getHeroModelArray() -> [HeroModel] {
         return heroArray
     }
     
@@ -86,7 +88,7 @@ class ViewController: UIViewController {
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         if let visibleIndexPath = collectionView.indexPathForItem(at: visiblePoint) {
             if let visibleCell = collectionView.cellForItem(at: visibleIndexPath) as? HeroView {
-                triangle.backgroundColor = visibleCell.getColor()
+                triangleView.backgroundColor = visibleCell.getColor()
             }
         }
     }
