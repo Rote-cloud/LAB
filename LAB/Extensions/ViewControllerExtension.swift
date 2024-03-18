@@ -12,12 +12,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         }
         
         let hero = self.getHeroModelArray()[indexPath.row]
-        let image = hero.imageName
+        let image = hero.image
         let text = hero.name
         let color = hero.color
-        if let img = UIImage(named: image) {
-            cell.config(image: img, str: text, color: color)
-        }
+        cell.config(image: image, str: text, color: color)
         return cell
     }
 }

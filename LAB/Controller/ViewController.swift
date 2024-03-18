@@ -20,14 +20,6 @@ class ViewController: UIViewController {
         return label
     }()
     
-    private var heroArray: [HeroModel] = {
-        let hero1 = HeroModel(name: "Deadpool", imageName: "Deadpool", color: Color.darkRed)
-        let hero2 = HeroModel(name: "Iron Man", imageName: "IronMan", color: Color.red)
-        let hero3 = HeroModel(name: "Spider Man", imageName: "SpiderMan", color: Color.blue)
-
-        return [hero1, hero2, hero3]
-    }()
-    
     private let collectionView: UICollectionView = {
         let layout = CollectionViewPagingLayout()
         layout.scrollDirection = .horizontal
