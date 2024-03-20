@@ -8,7 +8,7 @@ class ViewController: UIViewController {
         let triangleView = TriangleView(frame: CGRect(x: 0, y: Sizes.height / 2, width: Sizes.width, height: Sizes.height / 2))
         return triangleView
     }()
-    
+        
     private var marvelLogoImageView = UIImageView()
     private let marvelLogoImage = UIImage(named: "marvelLogo")
     
@@ -39,7 +39,6 @@ class ViewController: UIViewController {
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
-
     }
     
     private func setupUI() {
@@ -71,10 +70,6 @@ class ViewController: UIViewController {
         }
     }
     
-    public func getHeroModelArray() -> [HeroModel] {
-        return heroArray
-    }
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
@@ -84,5 +79,4 @@ class ViewController: UIViewController {
             }
         }
     }
-
 }

@@ -14,6 +14,7 @@
 		AE499CA62B920DAD00A725B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE499CA42B920DAD00A725B3 /* LaunchScreen.storyboard */; };
 		AE76E2332BA54276003DDAA4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AE76E2322BA54276003DDAA4 /* Kingfisher */; };
 		AE76E2352BA542E6003DDAA4 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76E2342BA542E6003DDAA4 /* ImageExtension.swift */; };
+		AE76E23A2BA7EEC2003DDAA4 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76E2392BA7EEC2003DDAA4 /* HeroViewController.swift */; };
 		AE771EFF2B92328E007C02C4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AE771EFE2B92328E007C02C4 /* SnapKit */; };
 		AE771F012B92328E007C02C4 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AE771F002B92328E007C02C4 /* SnapKit-Dynamic */; };
 		AE771F042B932189007C02C4 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE771F032B932189007C02C4 /* HeroView.swift */; };
@@ -36,6 +37,7 @@
 		AE499CA52B920DAD00A725B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE499CA72B920DAD00A725B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE76E2342BA542E6003DDAA4 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		AE76E2392BA7EEC2003DDAA4 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		AE771F032B932189007C02C4 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 		AE771F052B9321EF007C02C4 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
 		AE7BE86B2B9621F9008B7AA3 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				AE499C9D2B920DAC00A725B3 /* ViewController.swift */,
+				AE76E2392BA7EEC2003DDAA4 /* HeroViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			files = (
 				AE7BE86C2B9621F9008B7AA3 /* TriangleView.swift in Sources */,
 				AE499C9E2B920DAC00A725B3 /* ViewController.swift in Sources */,
+				AE76E23A2BA7EEC2003DDAA4 /* HeroViewController.swift in Sources */,
 				AE499C9A2B920DAC00A725B3 /* AppDelegate.swift in Sources */,
 				AE7BE86F2B976C7B008B7AA3 /* ViewControllerExtension.swift in Sources */,
 				AE771F042B932189007C02C4 /* HeroView.swift in Sources */,

@@ -3,7 +3,7 @@ import CollectionViewPagingLayout
 import SnapKit
 
 class HeroView : UICollectionViewCell {
-    
+        
     static let identifier = "HeroView"
     private var color: UIColor = .red
     private var card: UIView!
@@ -53,7 +53,7 @@ class HeroView : UICollectionViewCell {
             $0.edges.equalToSuperview()
         }
                 
-        imageView.addSubview(textView)
+        card.addSubview(textView)
         textView.snp.makeConstraints {
             $0.bottom.left.equalToSuperview().inset(Sizes.paddingLogoCell)
         }
