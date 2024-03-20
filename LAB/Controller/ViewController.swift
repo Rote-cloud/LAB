@@ -4,8 +4,10 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-    var triangleView: UIView = {
+    var triangleView: TriangleView = {
         let triangleView = TriangleView(frame: CGRect(x: 0, y: Sizes.height / 2, width: Sizes.width, height: Sizes.height / 2))
+        triangleView.translatesAutoresizingMaskIntoConstraints = false
+
         return triangleView
     }()
         
@@ -67,16 +69,6 @@ class ViewController: UIViewController {
             $0.top.equalTo(label).inset(Sizes.paddingTopCollectionView)
             $0.centerX.width.equalToSuperview()
             $0.height.equalTo(Sizes.heightCollectionView)
-        }
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
-        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-        if let visibleIndexPath = collectionView.indexPathForItem(at: visiblePoint) {
-            if let visibleCell = collectionView.cellForItem(at: visibleIndexPath) as? HeroView {
-                triangleView.backgroundColor = visibleCell.getColor()
-            }
         }
     }
 }

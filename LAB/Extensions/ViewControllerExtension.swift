@@ -27,5 +27,17 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
         self.navigationController?.pushViewController(heroViewController, animated: true)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentCenter = scrollView.contentOffset.x
+        let item = scrollView.bounds.size.width
+        
+        let visibleItem = Int(contentCenter / item)
+        
+        let hero = heroArray[visibleItem]
+        
+        triangleView.color = hero.color
+    }
+    
 }
 
