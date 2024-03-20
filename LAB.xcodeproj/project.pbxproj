@@ -12,6 +12,9 @@
 		AE499C9E2B920DAC00A725B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE499C9D2B920DAC00A725B3 /* ViewController.swift */; };
 		AE499CA32B920DAD00A725B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE499CA22B920DAD00A725B3 /* Assets.xcassets */; };
 		AE499CA62B920DAD00A725B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE499CA42B920DAD00A725B3 /* LaunchScreen.storyboard */; };
+		AE76E2332BA54276003DDAA4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AE76E2322BA54276003DDAA4 /* Kingfisher */; };
+		AE76E2352BA542E6003DDAA4 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76E2342BA542E6003DDAA4 /* ImageExtension.swift */; };
+		AE76E23A2BA7EEC2003DDAA4 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76E2392BA7EEC2003DDAA4 /* HeroViewController.swift */; };
 		AE771EFF2B92328E007C02C4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AE771EFE2B92328E007C02C4 /* SnapKit */; };
 		AE771F012B92328E007C02C4 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AE771F002B92328E007C02C4 /* SnapKit-Dynamic */; };
 		AE771F042B932189007C02C4 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE771F032B932189007C02C4 /* HeroView.swift */; };
@@ -33,6 +36,8 @@
 		AE499CA22B920DAD00A725B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE499CA52B920DAD00A725B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE499CA72B920DAD00A725B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE76E2342BA542E6003DDAA4 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		AE76E2392BA7EEC2003DDAA4 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		AE771F032B932189007C02C4 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 		AE771F052B9321EF007C02C4 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
 		AE7BE86B2B9621F9008B7AA3 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE76E2332BA54276003DDAA4 /* Kingfisher in Frameworks */,
 				AE771EFF2B92328E007C02C4 /* SnapKit in Frameworks */,
 				AE771F012B92328E007C02C4 /* SnapKit-Dynamic in Frameworks */,
 				AE7BE86A2B960E92008B7AA3 /* CollectionViewPagingLayout in Frameworks */,
@@ -103,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				AE499C9D2B920DAC00A725B3 /* ViewController.swift */,
+				AE76E2392BA7EEC2003DDAA4 /* HeroViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 			children = (
 				AE7BE86E2B976C7B008B7AA3 /* ViewControllerExtension.swift */,
 				AE7BE8732B977039008B7AA3 /* ColorExtension.swift */,
+				AE76E2342BA542E6003DDAA4 /* ImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 				AE771EFE2B92328E007C02C4 /* SnapKit */,
 				AE771F002B92328E007C02C4 /* SnapKit-Dynamic */,
 				AE7BE8692B960E92008B7AA3 /* CollectionViewPagingLayout */,
+				AE76E2322BA54276003DDAA4 /* Kingfisher */,
 			);
 			productName = LAB;
 			productReference = AE499C962B920DAC00A725B3 /* LAB.app */;
@@ -186,6 +195,7 @@
 			packageReferences = (
 				AE771EFD2B92328E007C02C4 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				AE7BE8682B960E92008B7AA3 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */,
+				AE76E2312BA54276003DDAA4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = AE499C972B920DAC00A725B3 /* Products */;
 			projectDirPath = "";
@@ -215,11 +225,13 @@
 			files = (
 				AE7BE86C2B9621F9008B7AA3 /* TriangleView.swift in Sources */,
 				AE499C9E2B920DAC00A725B3 /* ViewController.swift in Sources */,
+				AE76E23A2BA7EEC2003DDAA4 /* HeroViewController.swift in Sources */,
 				AE499C9A2B920DAC00A725B3 /* AppDelegate.swift in Sources */,
 				AE7BE86F2B976C7B008B7AA3 /* ViewControllerExtension.swift in Sources */,
 				AE771F042B932189007C02C4 /* HeroView.swift in Sources */,
 				AE499C9C2B920DAC00A725B3 /* SceneDelegate.swift in Sources */,
 				AE7BE8762B97727B008B7AA3 /* Sizes.swift in Sources */,
+				AE76E2352BA542E6003DDAA4 /* ImageExtension.swift in Sources */,
 				AE771F062B9321EF007C02C4 /* HeroModel.swift in Sources */,
 				AE7BE8782B9775F0008B7AA3 /* Fonts.swift in Sources */,
 				AE7BE8722B976FA6008B7AA3 /* Color.swift in Sources */,
@@ -438,6 +450,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AE76E2312BA54276003DDAA4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 		AE771EFD2B92328E007C02C4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -457,6 +477,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AE76E2322BA54276003DDAA4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE76E2312BA54276003DDAA4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		AE771EFE2B92328E007C02C4 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AE771EFD2B92328E007C02C4 /* XCRemoteSwiftPackageReference "SnapKit" */;

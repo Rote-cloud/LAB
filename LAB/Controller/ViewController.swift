@@ -4,11 +4,13 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-    var triangleView: UIView = {
+    var triangleView: TriangleView = {
         let triangleView = TriangleView(frame: CGRect(x: 0, y: Sizes.height / 2, width: Sizes.width, height: Sizes.height / 2))
+        triangleView.translatesAutoresizingMaskIntoConstraints = false
+
         return triangleView
     }()
-    
+        
     private var marvelLogoImageView = UIImageView()
     private let marvelLogoImage = UIImage(named: "marvelLogo")
     
@@ -18,14 +20,6 @@ class ViewController: UIViewController {
         label.font = Fonts.logoFont
         label.textColor = .white
         return label
-    }()
-    
-    private var heroArray: [HeroModel] = {
-        let hero1 = HeroModel(name: "Deadpool", imageName: "Deadpool", color: Color.darkRed)
-        let hero2 = HeroModel(name: "Iron Man", imageName: "IronMan", color: Color.red)
-        let hero3 = HeroModel(name: "Spider Man", imageName: "SpiderMan", color: Color.blue)
-
-        return [hero1, hero2, hero3]
     }()
     
     private let collectionView: UICollectionView = {
@@ -47,7 +41,6 @@ class ViewController: UIViewController {
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
-
     }
     
     private func setupUI() {
@@ -78,19 +71,4 @@ class ViewController: UIViewController {
             $0.height.equalTo(Sizes.heightCollectionView)
         }
     }
-    
-    public func getHeroModelArray() -> [HeroModel] {
-        return heroArray
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
-        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-        if let visibleIndexPath = collectionView.indexPathForItem(at: visiblePoint) {
-            if let visibleCell = collectionView.cellForItem(at: visibleIndexPath) as? HeroView {
-                triangleView.backgroundColor = visibleCell.getColor()
-            }
-        }
-    }
-
 }

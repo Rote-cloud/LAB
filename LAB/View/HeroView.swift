@@ -3,19 +3,12 @@ import CollectionViewPagingLayout
 import SnapKit
 
 class HeroView : UICollectionViewCell {
-    
+        
     static let identifier = "HeroView"
     private var color: UIColor = .red
     private var card: UIView!
     
-    private let imageView : UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(systemName: "chooseImage")
-        image.frame = CGRect(x: 0, y: 0, width: Sizes.width, height: Sizes.height)
-        image.layer.cornerRadius = 20
-        image.clipsToBounds = true
-        return image
-    }()
+    private var imageView = UIImageView()
     
     private let textView : UILabel = {
         let text = UILabel()
@@ -27,8 +20,8 @@ class HeroView : UICollectionViewCell {
         return text
     }()
     
-    public func config(image: UIImage, str: String, color: UIColor) {
-        self.imageView.image = image
+    public func config(image: UIImageView, str: String, color: UIColor) {
+        self.imageView = image
         self.textView.text = str
         self.color = color
         self.setupUI()
@@ -42,10 +35,17 @@ class HeroView : UICollectionViewCell {
             height: Int(Sizes.heightCollectionView)
                 )
         card = UIView(frame: cardFrame)
-
         
         contentView.addSubview(card)
-
+        
+        imageView.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: Sizes.width,
+            height: Sizes.height
+                )
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 20
         
         card.addSubview(imageView)
         
@@ -53,7 +53,7 @@ class HeroView : UICollectionViewCell {
             $0.edges.equalToSuperview()
         }
                 
-        imageView.addSubview(textView)
+        card.addSubview(textView)
         textView.snp.makeConstraints {
             $0.bottom.left.equalToSuperview().inset(Sizes.paddingLogoCell)
         }

@@ -12,4 +12,5 @@ struct Sizes {
     static let marvelLogoHeight = 25
     static let paddingCell = 35
     static let paddingLogoCell = 40
+    static let paddingText = 20
 }
