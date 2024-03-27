@@ -10,9 +10,19 @@
 		AE499C9A2B920DAC00A725B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE499C992B920DAC00A725B3 /* AppDelegate.swift */; };
 		AE499C9C2B920DAC00A725B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE499C9B2B920DAC00A725B3 /* SceneDelegate.swift */; };
 		AE499C9E2B920DAC00A725B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE499C9D2B920DAC00A725B3 /* ViewController.swift */; };
-		AE499CA12B920DAC00A725B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE499C9F2B920DAC00A725B3 /* Main.storyboard */; };
 		AE499CA32B920DAD00A725B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE499CA22B920DAD00A725B3 /* Assets.xcassets */; };
 		AE499CA62B920DAD00A725B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE499CA42B920DAD00A725B3 /* LaunchScreen.storyboard */; };
+		AE771EFF2B92328E007C02C4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AE771EFE2B92328E007C02C4 /* SnapKit */; };
+		AE771F012B92328E007C02C4 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AE771F002B92328E007C02C4 /* SnapKit-Dynamic */; };
+		AE771F042B932189007C02C4 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE771F032B932189007C02C4 /* HeroView.swift */; };
+		AE771F062B9321EF007C02C4 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE771F052B9321EF007C02C4 /* HeroModel.swift */; };
+		AE7BE86A2B960E92008B7AA3 /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = AE7BE8692B960E92008B7AA3 /* CollectionViewPagingLayout */; };
+		AE7BE86C2B9621F9008B7AA3 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE86B2B9621F9008B7AA3 /* TriangleView.swift */; };
+		AE7BE86F2B976C7B008B7AA3 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE86E2B976C7B008B7AA3 /* ViewControllerExtension.swift */; };
+		AE7BE8722B976FA6008B7AA3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE8712B976FA6008B7AA3 /* Color.swift */; };
+		AE7BE8742B977039008B7AA3 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE8732B977039008B7AA3 /* ColorExtension.swift */; };
+		AE7BE8762B97727B008B7AA3 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE8752B97727B008B7AA3 /* Sizes.swift */; };
+		AE7BE8782B9775F0008B7AA3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE8772B9775F0008B7AA3 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +30,17 @@
 		AE499C992B920DAC00A725B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE499C9B2B920DAC00A725B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AE499C9D2B920DAC00A725B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AE499CA02B920DAC00A725B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE499CA22B920DAD00A725B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE499CA52B920DAD00A725B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE499CA72B920DAD00A725B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE771F032B932189007C02C4 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
+		AE771F052B9321EF007C02C4 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		AE7BE86B2B9621F9008B7AA3 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
+		AE7BE86E2B976C7B008B7AA3 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		AE7BE8712B976FA6008B7AA3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		AE7BE8732B977039008B7AA3 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		AE7BE8752B97727B008B7AA3 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		AE7BE8772B9775F0008B7AA3 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE771EFF2B92328E007C02C4 /* SnapKit in Frameworks */,
+				AE771F012B92328E007C02C4 /* SnapKit-Dynamic in Frameworks */,
+				AE7BE86A2B960E92008B7AA3 /* CollectionViewPagingLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +76,62 @@
 		AE499C982B920DAC00A725B3 /* LAB */ = {
 			isa = PBXGroup;
 			children = (
+				AE7BE8702B976F32008B7AA3 /* Constants */,
+				AE7BE86D2B976C47008B7AA3 /* Extensions */,
+				AE771F022B931F00007C02C4 /* Model */,
+				AE771EFA2B922A2D007C02C4 /* Controller */,
+				AE771EF92B922A14007C02C4 /* View */,
 				AE499C992B920DAC00A725B3 /* AppDelegate.swift */,
 				AE499C9B2B920DAC00A725B3 /* SceneDelegate.swift */,
-				AE499C9D2B920DAC00A725B3 /* ViewController.swift */,
-				AE499C9F2B920DAC00A725B3 /* Main.storyboard */,
 				AE499CA22B920DAD00A725B3 /* Assets.xcassets */,
 				AE499CA42B920DAD00A725B3 /* LaunchScreen.storyboard */,
 				AE499CA72B920DAD00A725B3 /* Info.plist */,
 			);
 			path = LAB;
+			sourceTree = "<group>";
+		};
+		AE771EF92B922A14007C02C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE771F032B932189007C02C4 /* HeroView.swift */,
+				AE7BE86B2B9621F9008B7AA3 /* TriangleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE771EFA2B922A2D007C02C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE499C9D2B920DAC00A725B3 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE771F022B931F00007C02C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE771F052B9321EF007C02C4 /* HeroModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE7BE86D2B976C47008B7AA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE7BE86E2B976C7B008B7AA3 /* ViewControllerExtension.swift */,
+				AE7BE8732B977039008B7AA3 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE7BE8702B976F32008B7AA3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AE7BE8712B976FA6008B7AA3 /* Color.swift */,
+				AE7BE8752B97727B008B7AA3 /* Sizes.swift */,
+				AE7BE8772B9775F0008B7AA3 /* Fonts.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +150,11 @@
 			dependencies = (
 			);
 			name = LAB;
+			packageProductDependencies = (
+				AE771EFE2B92328E007C02C4 /* SnapKit */,
+				AE771F002B92328E007C02C4 /* SnapKit-Dynamic */,
+				AE7BE8692B960E92008B7AA3 /* CollectionViewPagingLayout */,
+			);
 			productName = LAB;
 			productReference = AE499C962B920DAC00A725B3 /* LAB.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +183,10 @@
 				Base,
 			);
 			mainGroup = AE499C8D2B920DAC00A725B3;
+			packageReferences = (
+				AE771EFD2B92328E007C02C4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				AE7BE8682B960E92008B7AA3 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */,
+			);
 			productRefGroup = AE499C972B920DAC00A725B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +203,6 @@
 			files = (
 				AE499CA62B920DAD00A725B3 /* LaunchScreen.storyboard in Resources */,
 				AE499CA32B920DAD00A725B3 /* Assets.xcassets in Resources */,
-				AE499CA12B920DAC00A725B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +213,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE7BE86C2B9621F9008B7AA3 /* TriangleView.swift in Sources */,
 				AE499C9E2B920DAC00A725B3 /* ViewController.swift in Sources */,
 				AE499C9A2B920DAC00A725B3 /* AppDelegate.swift in Sources */,
+				AE7BE86F2B976C7B008B7AA3 /* ViewControllerExtension.swift in Sources */,
+				AE771F042B932189007C02C4 /* HeroView.swift in Sources */,
 				AE499C9C2B920DAC00A725B3 /* SceneDelegate.swift in Sources */,
+				AE7BE8762B97727B008B7AA3 /* Sizes.swift in Sources */,
+				AE771F062B9321EF007C02C4 /* HeroModel.swift in Sources */,
+				AE7BE8782B9775F0008B7AA3 /* Fonts.swift in Sources */,
+				AE7BE8722B976FA6008B7AA3 /* Color.swift in Sources */,
+				AE7BE8742B977039008B7AA3 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AE499C9F2B920DAC00A725B3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AE499CA02B920DAC00A725B3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AE499CA42B920DAD00A725B3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,9 +371,9 @@
 				INFOPLIST_FILE = LAB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,9 +398,9 @@
 				INFOPLIST_FILE = LAB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +436,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE771EFD2B92328E007C02C4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		AE7BE8682B960E92008B7AA3 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amirdew/CollectionViewPagingLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE771EFE2B92328E007C02C4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE771EFD2B92328E007C02C4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		AE771F002B92328E007C02C4 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE771EFD2B92328E007C02C4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		AE7BE8692B960E92008B7AA3 /* CollectionViewPagingLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE7BE8682B960E92008B7AA3 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */;
+			productName = CollectionViewPagingLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE499C8E2B920DAC00A725B3 /* Project object */;
 }
